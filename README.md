@@ -102,6 +102,44 @@ The backend is a high-fidelity Python simulation engine that handles Keplerian o
 
 No external pip dependencies are required. The simulation is fully self-contained.
 
+### Example CLI Terminal Output
+
+When you run `python main.py`, the autonomous scheduler outputs the following real-time telemetry log:
+
+```text
+================================================================================
+               ORBITAL HARMONY — AUTONOMOUS MISSION CONTROL CLI v1.0
+               Status: UPLINK NOMINAL | Live Telemetry: ACTIVE
+================================================================================
+[+] Loading observation queue...
+[+] Building observatory network profiles...
+[+] Ingesting live Celestrak TLE catalog...
+    Ingested 3 satellite active state records.
+
+[+] Operating Scheduler Optimization Loop...
+
+[AI OPTIMIZER] Rescheduled 1 observation conflicts:
+--------------------------------------------------------------------------------
+[STARLINK-5472 CONFLICT] 2024 PT5 — Near-Earth Asteroid (TIER 3 — IRREPLACEABLE) affected.
+  Original window  : T+00:05 -> 22 minutes
+  Action taken     : Rescheduled to T+00:10 (+5 min shift)
+  AI Core Reasoning Trace:
+    * Target classified as TIER 3 — Planetary Defense.
+    * Conflict probability with STARLINK-5472 = 23.5% over original window.
+    * Shifted by +5 min to clear sky window.
+    * Evaluated alternate slots; no displacement of higher-tier observations.
+    * Schedule committed. Confidence 0.98.
+--------------------------------------------------------------------------------
+
+[-][-][-][-][-][-][-][-][-][-] PERFORMANCE SUMMATION CARD [-][-][-][-][-][-][-][-][-][-]
+  Total Ingested Observations   : 5
+  Interfered Targets Protected  : 1
+  Scientific Recovery Rate      : 43.4%
+  Recovered Operating Exposure  : 0.37 hours
+  Estimated Cost Avoided (USD)  : $1,833.33
+================================================================================
+```
+
 ---
 
 ## 👥 Contributors
