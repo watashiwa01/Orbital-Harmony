@@ -61,9 +61,29 @@ The frontend contains the interactive 3D Orbital Globe, live telemetry HUDs, and
 
 ## 🐍 Backend (Python CLI Simulation)
 
-The backend runs the orbital propagation, collision/interference forecasting engine, and priority scheduling optimization.
+The backend is a high-fidelity Python simulation engine that handles Keplerian orbital propagation, Line-of-Sight (LOS) conjunction calculations, and priority-guided timeline optimization. It is built using clean, self-contained modular components.
 
 ![Conjunction Diagram](./presentation/conjunction_diagram.png)
+
+### Core Architectural Modules
+
+- **`models.py` (Data Layer)**: Defines strongly typed dataclasses representing the system objects (`Observatory`, `Observation`, `Satellite`, `InterferenceEvent`, and `ScheduleDecision`).
+- **`config.py` (Observatory Profiles)**: Stores geographic parameters (Latitude/Longitude, elevation, aperture size) of ground-based telescope networks (e.g., Hanle and Devasthal).
+- **`data/` (Ingestion Engines)**:
+  - `tle_loader.py`: Ingests satellite orbital catalogs in standard two-line element format (TLE).
+  - `observations.py`: Loads tonight's scheduled observation queues.
+- **`physics/` (Celestial Mechanics)**:
+  - `propagation.py`: Solves orbital geometries. Uses Kepler's Third Law (\(T = 2\pi\sqrt{a^3/\mu}\)) to derive altitude and period, executing circular orbit state propagation over the simulation epoch.
+  - `solar.py`: Determines solar elevation angles to check if a satellite is illuminated by the sun (which causes scattering and ruins observations).
+  - `interference.py`: Vector math engine. Computes look angles (Azimuth/Elevation) from ground stations. Flags intersections where the angular offset from the telescope's pointing cone is \(< 1.5^\circ\) and the satellite elevation is above the local horizon (\(> 10^\circ\)).
+- **`scheduler/` (Heuristics Optimization)**:
+  - `optimizer.py`: A priority scheduler. When a conflict is flagged, it runs a constraint search to shift the observation window, ensuring the new window is clear of satellite crossings and does not overwrite higher-tier observations.
+  - `explain.py`: Renders natural language logs of the scheduler's decision reasoning trace (e.g. why an shift was applied, confidence levels).
+- **`output/` (Telemetry Dashboard & Analysis)**:
+  - `dashboard.py`: Renders the terminal HUD displaying autonomous tracking metrics.
+  - `metrics.py`: Computes high-level analytics, including the *Scientific Recovery Rate*, *Hours Rescued*, and *Estimated Cost Avoided (USD)* based on aperture operational rates.
+
+---
 
 ### Running Backend Locally
 
@@ -74,6 +94,10 @@ The backend runs the orbital propagation, collision/interference forecasting eng
 2. Run the main simulation loop (requires Python 3.10+):
    ```bash
    python main.py
+   ```
+3. Run the unit tests suite:
+   ```bash
+   python -m unittest discover -s tests
    ```
 
 No external pip dependencies are required. The simulation is fully self-contained.
