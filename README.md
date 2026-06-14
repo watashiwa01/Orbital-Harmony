@@ -29,6 +29,12 @@ Orbital Harmony protects astronomical observations from satellite constellation 
 4. **Priority-Based Schedule Shift**:
    If conflict probability exceeds tolerance, the optimization engine evaluates alternate time slots. It shifts the observation window (typically 5 to 20 minutes) to resolve the conflict without displacing higher-tier observations, preserving scientific data.
 
+### 🧩 Dual-Engine Simulation Architecture
+
+For maximum decoupling, Orbital Harmony operates two distinct simulation layers:
+- **Client-Side Visualizer (TypeScript)**: Runs real-time orbital calculations locally in the browser utilizing `satellite.js` (SGP4) and Three.js to render a smooth, interactive 3D representation of active satellite networks, orbital rings, and observatory pointing cones.
+- **Server-Side Optimizer (Python)**: Executes offline optimization runs, parsing satellite TLE records, evaluating line-of-sight horizon/pointing constraints, and running priority scheduling loops to maximize data recovery rate and avoid scheduling conflicts.
+
 ---
 
 ## 🖥️ Frontend (Vite / React / TanStack Start)
