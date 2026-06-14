@@ -113,3 +113,5 @@ def ecef_to_look_angles(
     azimuth = azimuth % (2.0 * math.pi)
 
     return math.degrees(azimuth), math.degrees(elevation), range_dist
+
+# Refactored position coordinates math for Keplerian Kepler-3 approximation
