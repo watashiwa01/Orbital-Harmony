@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orbital Harmony — Complete Presentation Guide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0284c7;
+      --primary-light: #e0f2fe;
+      --dark: #0f172a;
+      --text: #334155;
+      --light-bg: #f8fafc;
+      --border: #e2e8f0;
+      --success: #16a34a;
+      --warning: #ca8a04;
+      --destructive: #dc2626;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      line-height: 1.6;
+      background-color: var(--light-bg);
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 60px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      border-radius: 8px;
+    }
+
+    h1, h2, h3, h4 {
+      color: var(--dark);
+      font-weight: 700;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      border-bottom: 2px solid var(--primary);
+      padding-bottom: 15px;
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-top: 40px;
+      margin-bottom: 20px;
+      color: var(--primary);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+    }
+
+    h3 {
+      font-size: 1.3rem;
+      margin-top: 25px;
+      margin-bottom: 12px;
+      color: var(--dark);
+      border-left: 3px solid var(--primary);
+      padding-left: 10px;
+    }
+
+    p {
+      margin-bottom: 15px;
+      font-size: 1.05rem;
+    }
+
+    ul, ol {
+      margin-left: 25px;
+      margin-bottom: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+      font-size: 1.05rem;
+    }
+
+    code, pre {
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    code {
+      background: var(--light-bg);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.95rem;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 4px 10px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .badge-primary { background-color: var(--primary-light); color: var(--primary); }
+    .badge-success { background-color: #dcfce7; color: var(--success); }
+    .badge-warning { background-color: #fef9c3; color: var(--warning); }
+    .badge-destructive { background-color: #fee2e2; color: var(--destructive); }
+
+    .img-box {
+      margin: 30px 0;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    }
+
+    .img-box img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .caption {
+      background: var(--light-bg);
+      padding: 12px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #64748b;
+      border-top: 1px solid var(--border);
+      font-style: italic;
+    }
+
+    .table-container {
+      overflow-x: auto;
+      margin: 25px 0;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+    }
+
+    th, td {
+      border: 1px solid var(--border);
+      padding: 12px;
+      text-align: left;
+    }
+
+    th {
+      background: var(--light-bg);
+      font-weight: 600;
+      color: var(--dark);
+    }
+
+    .note {
+      background: var(--primary-light);
+      border-left: 4px solid var(--primary);
+      padding: 15px;
+      border-radius: 0 4px 4px 0;
+      margin: 25px 0;
+    }
+
+    .note p {
+      margin: 0;
+      font-weight: 500;
+      color: #0369a1;
+    }
+
+    .desc-block {
+      background: #fafafa;
+      border: 1px solid #f0f0f0;
+      padding: 20px;
+      border-radius: 6px;
+      margin-bottom: 20px;
+    }
+
+    .desc-block strong {
+      color: var(--dark);
+    }
+
+    @media print {
+      body {
+        background: #ffffff;
+        padding: 0;
+      }
+      .container {
+        box-shadow: none;
+        padding: 0;
+        width: 100%;
+        max-width: 100%;
+      }
+      .page-break {
+        page-break-before: always;
+      }
+      h1, h2, h3, h4 {
+        page-break-after: avoid;
+      }
+      tr, img {
+        page-break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    
+    <!-- Title Page -->
+    <div style="text-align: center; padding: 40px 0; border-bottom: 2px solid var(--border); margin-bottom: 40px;">
+      <span class="badge badge-primary">Presenter Playbook</span>
+      <h1 style="border: none; margin-top: 15px; margin-bottom: 15px; font-size: 2.6rem; color: var(--dark);">Orbital Harmony</h1>
+      <p style="font-size: 1.25rem; color: #64748b; max-width: 600px; margin: 0 auto 30px;">
+        Complete Demo Manual: Landing Elements, Interactive Globe, Buttons, and Backend Explanations
+      </p>
+      
+      <div class="img-box">
+        <img src="presentation_cover.png" alt="Orbital Harmony Presentation Cover">
+        <div class="caption">Slide 1: Platform Overview and Mission Objective</div>
+      </div>
+    </div>
+
+    <!-- Chapter 1: Landing Page -->
+    <h2>1. The Landing Page Structure & Elements</h2>
+    <p>
+      The landing page is designed to provide immediate atmospheric immersion (sci-fi dark mode) and establish the megaconstellation threat crisis. Here is exactly what is on the page:
+    </p>
+
+    <div class="desc-block">
+      <h3>A. Top HUD Header</h3>
+      <ul>
+        <li><strong>Title Logo</strong>: A stylized wireframe diamond with a blinking green status node, reading "ORBITAL HARMONY v1.0".</li>
+        <li><strong>Status indicator</strong>: Reads "UPLINK NOMINAL" to simulate a live space control console connection.</li>
+        <li><strong>Live Telemetry clock</strong>: Ticks current UTC time to represent active data streams.</li>
+      </ul>
+    </div>
+
+    <div class="desc-block">
+      <h3>B. Hero Section & Main Copy</h3>
+      <ul>
+        <li><strong>Main Headline</strong>: <code style="font-size: 1.1rem; color: var(--dark);">PROTECTING HUMANITY'S VIEW OF THE UNIVERSE</code> in bold, glowing text.</li>
+        <li><strong>Subtitle</strong>: <em>"Every night thousands of satellites cross telescope fields of view. Some observations can wait. Others may never happen again."</em></li>
+        <li><strong>Primary Button: "Enter Mission Control"</strong>: Leads directly to the live 3D Tracking dashboard.</li>
+        <li><strong>Secondary Button: "See the threat"</strong>: Scrolls the browser window down smoothly to the "Five Acts" story.</li>
+      </ul>
+    </div>
+
+    <div class="desc-block">
+      <h3>C. The Bottom HUD Status Row</h3>
+      <p>Four glowing glass panels displaying real-world simulation baselines:</p>
+      <ul>
+        <li><strong>Tracked Objects:</strong> 47,283 (satellite catalog counts).</li>
+        <li><strong>Active Constellations:</strong> 12 (number of satellite networks modeled).</li>
+        <li><strong>Observatories Online:</strong> 4 / 4 (online tracking stations).</li>
+        <li><strong>Interference Risk (24h):</strong> HIGH (status warning indicator).</li>
+      </ul>
+    </div>
+
+    <div class="desc-block">
+      <h3>D. "The Crisis / Five Acts" Scroll Story</h3>
+      <p>As the user scrolls, the page highlights five stages of a collision incident, each featuring a specific interactive HUD graphic:</p>
+      <ol>
+        <li><strong>Act 01: Observation Active</strong> — Tells of the Hanle Observatory tracking an asteroid. Graphic shows a rotating green radar sweep tracking target "2024 PT5".</li>
+        <li><strong>Act 02: Threat Detected</strong> — Starlink-5472 is flagged on an intersecting path. Graphic displays the satellite's trail in red crossing into the field-of-view cone.</li>
+        <li><strong>Act 03: Interference Predicted</strong> — A 94% contamination probability dial flashes red, warnings detail a 41-day deferment penalty.</li>
+        <li><strong>Act 04: Orbital Harmony Engaged</strong> — The AI engine takes the watch. An active code terminal types out alternative window evaluations.</li>
+        <li><strong>Act 05: Observation Protected</strong> — The schedule is shifted +18 minutes. Graphic displays timeline comparisons with a green "Science Protected" badge.</li>
+      </ol>
+    </div>
+
+    <!-- Chapter 2: The 3D Orbit Globe & Satellites -->
+    <h2 class="page-break">2. The 3D Globe & Satellite Interaction</h2>
+    <p>
+      The core visual centerpiece of the dashboard is the interactive 3D Globe. Here is a guide to its mechanics:
+    </p>
+
+    <div class="img-box">
+      <img src="globe_dots_telemetry.png" alt="3D Globe Dots and Telemetry Visual">
+      <div class="caption">Slide 2: Interactive 3D Globe Mapping and Satellite Telemetry Readouts</div>
+    </div>
+
+    <h3>A. What do the colored dots represent?</h3>
+    <ul>
+      <li><span style="color: #7dd3fc; font-weight: bold;">Blue Dots</span> = <strong>Starlink</strong> satellites (spacex constellation).</li>
+      <li><span style="color: #fbbf24; font-weight: bold;">Yellow Dots</span> = <strong>OneWeb</strong> satellites (communications constellation).</li>
+      <li><span style="color: #c4b5fd; font-weight: bold;">Purple/Violet Dots</span> = <strong>Iridium</strong> satellites (legacy network).</li>
+    </ul>
+
+    <h3>B. What do the rings and lines represent?</h3>
+    <ul>
+      <li><strong>Orbital Rings</strong>: The thin colored trails around the Earth represent the past and future orbital tracks calculated for each satellite.</li>
+      <li><strong>Telescope Cones (Green Cones)</strong>: Glowing light pyramids pointing outward from the Earth. These are the fields of view of the ground observatories in India (Hanle and Devasthal), projecting where the telescopes are pointed.</li>
+      <li><strong>Intersection Path</strong>: When a satellite is about to cross a telescope cone, its path turns solid red, indicating a conflict.</li>
+    </ul>
+
+    <h3>C. What happens when you click a satellite dot?</h3>
+    <ol>
+      <li>The camera centers and locks onto the satellite's path, rotating with it.</li>
+      <li>The satellite's trail glows solid red on the globe.</li>
+      <li>The right-hand panel slides open to show <strong>Satellite Telemetry</strong>, drawing real calculations:
+        <ul>
+          <li><strong>Altitude:</strong> Actual distance in kilometers above Earth.</li>
+          <li><strong>Inclination:</strong> Angle relative to the equator.</li>
+          <li><strong>Period:</strong> Minutes required for one complete orbit.</li>
+          <li><strong>Velocity:</strong> Computed using Keplerian mechanics (~7.5 km/s).</li>
+          <li><strong>Interference Probability:</strong> Likelihood of blocking a target over the next 24 hours.</li>
+        </ul>
+      </li>
+    </ol>
+
+    <!-- Chapter 3: Button Functionalities -->
+    <h2 class="page-break">3. Dashboard Controls (Button-by-Button Guide)</h2>
+    <p>Every interactive button on the Mission Control dashboard is documented below:</p>
+
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Button / Control</th>
+            <th>Location</th>
+            <th>What It Does (Functionality)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Logo Header</strong></td>
+            <td>Top Left</td>
+            <td>Returns the user to the landing page.</td>
+          </tr>
+          <tr>
+            <td><strong>LIVE Button</strong></td>
+            <td>Top Center</td>
+            <td>Resets the simulator time back to the current real-world UTC time.</td>
+          </tr>
+          <tr>
+            <td><strong>+1h, +6h, +1d, +1w</strong></td>
+            <td>Top Center</td>
+            <td>Skips the simulation clock forward. The satellites instantly jump to their calculated mathematical positions for that future date.</td>
+          </tr>
+          <tr>
+            <td><strong>Play/Pause (▶ / ❚❚)</strong></td>
+            <td>Top Center</td>
+            <td>Pauses or resumes the continuous orbit calculations.</td>
+          </tr>
+          <tr>
+            <td><strong>Speed Multipliers (1x - 1000x)</strong></td>
+            <td>Top Center</td>
+            <td>Changes how fast time flows. 1000x makes satellites fly around the globe, showing orbital paths clearly.</td>
+          </tr>
+          <tr>
+            <td><strong>Density (HIGH / MED)</strong></td>
+            <td>Top Right</td>
+            <td>Toggles rendering load. "MED" hides half of the satellites to ensure smooth rendering on slower computers.</td>
+          </tr>
+          <tr>
+            <td><strong>RUN DEMO Button</strong></td>
+            <td>Top Right</td>
+            <td>Triggers the automated threat demonstration scenario.</td>
+          </tr>
+          <tr>
+            <td><strong>Observation Rows</strong></td>
+            <td>Left Panel</td>
+            <td>Clicking a row highlights that celestial target (such as an asteroid or transit exoplanet) and changes the right panel to show target coordinates.</td>
+          </tr>
+          <tr>
+            <td><strong>Close button (✕)</strong></td>
+            <td>Right Panel</td>
+            <td>Closes the telemetry details card and returns to default dashboard state.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Chapter 4: Conjunction Math -->
+    <h2 class="page-break">4. Conjunction & Resolution Logic</h2>
+    <p>
+      The platform models intersections by evaluating telescope fields-of-view against satellite trajectories. The diagram below illustrates the conjunction hazard and the shifted window calculation:
+    </p>
+
+    <div class="img-box">
+      <img src="conjunction_diagram.png" alt="Conjunction Diagram">
+      <div class="caption">Slide 3: Visualizing Conjunction Dangers (Top) and AI Optimization Resolution (Bottom)</div>
+    </div>
+
+    <h3>Under-the-Hood Math (For Technical Q&A):</h3>
+    <ul>
+      <li><strong>SGP4 Orbit Propagator</strong>: Recalculates satellite ECI coordinates every time step using real Keplerian formulas.</li>
+      <li><strong>FOV Intersection Cones</strong>: Telescope pointing angles (Right Ascension and Declination) are converted to pointing vectors. The system checks if the angle between the pointing vector and the satellite range vector is less than 1.5 degrees.</li>
+      <li><strong>Horizon Constraint</strong>: Prevents false alarms by checking if the satellite is above the horizon (>10° elevation) from the telescope’s coordinate location.</li>
+      <li><strong>Priority-Based Scheduler</strong>: Ensures that resolving a low-tier conflict doesn't block or displace a higher-priority target.</li>
+    </ul>
+
+    <!-- Chapter 5: Voiceover Script -->
+    <h2 class="page-break">5. Complete Voiceover Script</h2>
+    
+    <div style="background: var(--light-bg); padding: 30px; border-radius: 6px; border: 1px dashed var(--primary); font-family: 'Inter', sans-serif;">
+      
+      <p><strong>[Step 1: Start on Home Page]</strong></p>
+      <p style="font-style: italic; font-size: 1.1rem; color: var(--dark);">
+        "Hello everyone, today I am presenting Orbital Harmony: our autonomous operations system built to protect astronomical observations from mega-constellation interference."
+      </p>
+
+      <p><strong>[Step 2: Scroll past the 5 Acts Cards]</strong></p>
+      <p style="font-style: italic; font-size: 1.1rem; color: var(--dark);">
+        "As constellations grow, satellites crossing telescope fields of view ruin deep-space images. Here, our page walks you through a real example: a telescope tracking a stadium-sized asteroid. The system detects an incoming Starlink satellite, predicts a 94% contamination risk, and computes an optimized shift window to save the observation. Let's look at this live."
+      </p>
+
+      <p><strong>[Step 3: Click Enter Mission Control]</strong></p>
+      <p style="font-style: italic; font-size: 1.1rem; color: var(--dark);">
+        "This is our Mission Control dashboard. In the center is our interactive 3D Globe. On the left, we monitor online observatory nodes—specifically Hanle and Devasthal stations—and track the active queue of celestial targets scheduled for tonight."
+      </p>
+
+      <p><strong>[Step 4: Click a satellite dot on the globe]</strong></p>
+      <p style="font-style: italic; font-size: 1.1rem; color: var(--dark);">
+        "We can select any individual satellite on the globe to pull its live telemetry, speed, altitude, and period metrics on the fly. The orbit coordinates are computed using actual SGP4 calculations."
+      </p>
+
+      <p><strong>[Step 5: Click RUN DEMO]</strong></p>
+      <p style="font-style: italic; font-size: 1.1rem; color: var(--dark);">
+        "Let's simulate a live conflict. Clicking 'Run Demo' triggers our predictive scheduler. The screen flashes red as a Starlink satellite approaches the telescope pointing cone. Our AI Solver immediately intercepts, runs checks against the queue, and commits an eighteen-minute delay shift. The observation is saved with 100% data recovery, and our system logs return to nominal."
+      </p>
+
+      <p><strong>[Step 6: End Video]</strong></p>
+      <p style="font-style: italic; font-size: 1.1rem; color: var(--dark);">
+        "This confirms the core features are robust, optimized, and fully operational. Thank you for your time."
+      </p>
+
+    </div>
+
+    <!-- Chapter 6: PDF Instructions -->
+    <h2 class="page-break">6. How to Save this Guide as a PDF</h2>
+    <ol>
+      <li>Go to your project directory: <code>d:\orbital-harmony-sync-main\orbital-harmony-sync-main</code></li>
+      <li>Double-click the file named <strong><code>presentation_guide.html</code></strong>. It will open in your default browser.</li>
+      <li>Press <strong>Ctrl + P</strong> (Windows) or <strong>Cmd + P</strong> (Mac) to open the print options dialog.</li>
+      <li>Set the <strong>Destination</strong> option to <strong>Save as PDF</strong>.</li>
+      <li>Click on <strong>"More Settings"</strong> and check the box for <strong>"Background graphics"</strong> (this ensures all colored buttons and highlight cards render properly).</li>
+      <li>Click <strong>Save</strong> and name the file. It is now ready to print or email!</li>
+    </ol>
+
+  </div>
+
+</body>
+</html>
