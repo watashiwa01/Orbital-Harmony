@@ -101,3 +101,11 @@ The backend is a high-fidelity Python simulation engine that handles Keplerian o
    ```
 
 No external pip dependencies are required. The simulation is fully self-contained.
+
+---
+
+## 👥 Contributors
+
+This project is co-developed and maintained by:
+- **amg-xai** (Frontend Architecture)
+- **watashiwa01** (Backend Mechanics & Workspace Operations)
