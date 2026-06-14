@@ -1,5 +1,7 @@
 # Orbital Harmony Sync — Divided Workspace
 
+![Orbital Harmony Cover](./presentation/presentation_cover.png)
+
 This project contains both the frontend interface and the backend autonomous operations simulation for the **Orbital Harmony** system.
 
 ## Workspace Structure
@@ -17,6 +19,8 @@ The project has been divided into clean, specialized folders:
 ## 🖥️ Frontend (Vite / React / TanStack Start)
 
 The frontend contains the interactive 3D Orbital Globe, live telemetry HUDs, and the Mission Control interface.
+
+![Interactive 3D Globe](./presentation/globe_dots_telemetry.png)
 
 ### Running Frontend Locally
 
@@ -43,6 +47,8 @@ The frontend contains the interactive 3D Orbital Globe, live telemetry HUDs, and
 ## 🐍 Backend (Python CLI Simulation)
 
 The backend runs the orbital propagation, collision/interference forecasting engine, and priority scheduling optimization.
+
+![Conjunction Diagram](./presentation/conjunction_diagram.png)
 
 ### Running Backend Locally
 
