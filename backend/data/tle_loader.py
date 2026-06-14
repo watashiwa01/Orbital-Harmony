@@ -1,0 +1,19 @@
+# data/tle_loader.py
+# Offline TLE loader that uses local fallback data to prevent network hangs
+
+import os
+
+LOCAL_FALLBACK_TLE = """STARLINK-5472
+1 54720U 22100A   26100.00000000  .00000000  00000-0  00000-0 0  9993
+2 54720  53.0000  24.0153 0001000   0.0000 329.8973 15.0600000010000
+ONEWEB-1024
+1 47000U 21050A   26100.00000000  .00000000  00000-0  00000-0 0  9993
+2 47000  87.4000  12.3456 0001000   0.0000 120.4500 13.2000000010000
+IRIDIUM-99
+1 41900U 17001A   26100.00000000  .00000000  00000-0  00000-0 0  9993
+2 41900  86.4000  45.6789 0001000   0.0000  10.2300 14.3000000010000
+"""
+
+def load_tles(cache_dir: str = "cache") -> str:
+    """Returns local fallback TLE data immediately to avoid network DNS hangs."""
+    return LOCAL_FALLBACK_TLE
