@@ -1,0 +1,4 @@
+# Built-in libraries used: math, os, sys, dataclasses, typing
+# No external dependencies required for core run.
+# For testing:
+pytest>=7.0.0
