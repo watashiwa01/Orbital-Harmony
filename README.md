@@ -1,4 +1,4 @@
-# Orbital Harmony
+# Orbital Harmony 
 
 ![Orbital Harmony Cover](./presentation/presentation_cover.png)
 
