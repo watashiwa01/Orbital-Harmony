@@ -1,4 +1,4 @@
-# Orbital Harmony Sync — Divided Workspace
+# Orbital Harmony
 
 ![Orbital Harmony Cover](./presentation/presentation_cover.png)
 
@@ -13,6 +13,21 @@ The project has been divided into clean, specialized folders:
 ├── backend/            # Python CLI orbital simulation optimization loop
 └── presentation/       # Presentation deck images, diagrams, and HTML manuals
 ```
+
+---
+
+## ⚙️ System Procedure & Operational Workflow
+
+Orbital Harmony protects astronomical observations from satellite constellation interference through an automated, four-step scheduling optimization pipeline:
+
+1. **Observation Queue Ingestion**: 
+   The system loads telescope schedules containing coordinates (Right Ascension/Declination) and priority tiers (e.g., Tier 3 for irreplaceable planetary defense vs. Tier 1 for low-priority transits).
+2. **Real-time Satellite Propagation**:
+   Ingests active two-line element (TLE) catalog data and utilizes Keplerian orbital mechanics (approximating altitude via Kepler's Third Law) to compute precise coordinates relative to the observatories.
+3. **Conjunction Assessment & Intersection Check**:
+   Calculates telescope field-of-view (FOV) cones. If a satellite's vector intersects a telescope's 1.5° pointing cone while the satellite is above the horizon (>10° elevation), it flags a conflict and computes a collision probability.
+4. **Priority-Based Schedule Shift**:
+   If conflict probability exceeds tolerance, the optimization engine evaluates alternate time slots. It shifts the observation window (typically 5 to 20 minutes) to resolve the conflict without displacing higher-tier observations, preserving scientific data.
 
 ---
 
