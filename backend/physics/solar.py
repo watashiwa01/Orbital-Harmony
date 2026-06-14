@@ -47,3 +47,5 @@ def is_night(lat_deg: float, lon_deg: float, dt: datetime) -> bool:
     """
     elevation = get_sun_elevation(lat_deg, lon_deg, dt)
     return elevation <= -18.0
+
+# Solar elevation calculation helper functions added
