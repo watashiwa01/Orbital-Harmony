@@ -145,3 +145,5 @@ def optimize_schedule(
                 print(f"[ALERT] Could not reschedule observation {obs.name}! All alternative windows conflicted.")
 
     return decisions
+
+# Optimizations added for resolving priority-based observatory conflicts
